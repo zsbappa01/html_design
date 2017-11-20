@@ -1,0 +1,37 @@
+.partners {
+    &:hover {
+        .partner-item {
+            opacity: .7;
+        }
+    }
+}
+
+.partner-item {
+    display: block;
+    line-height: 150px;
+    text-align: center;
+    transition: all .15s linear !important;
+
+    &:hover {
+        opacity: 1 !important;
+    }
+
+    img {
+        height: auto;
+        max-width: 100%;
+        padding: 0px 23px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+        line-height: 1; 
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+        
+        img {
+            max-width: 130px;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@import 'init';
+@import 'helpers/colors';
+
+$image-path: '../../img/';
+$color-primary: $red;
+$color-secondary: $brown; 
+$color-black: $grey;
+
+@import 'core';

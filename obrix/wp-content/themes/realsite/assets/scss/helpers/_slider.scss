@@ -1,0 +1,122 @@
+.carousel-inner {
+	height: auto;
+
+	.item {
+		height: auto;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.carousel-control {
+	background-color: rgba(map-get($grey, 700), .7);
+	background-image: none !important;
+	bottom: auto;
+	height: 52px;
+	left: auto;
+	line-height: 52px;	
+	opacity: 1;
+	right: auto;
+	text-align: left;
+	text-shadow: none;
+	top: 50%;
+	-webkit-transform: translateY(-50%);	
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transition: background-color .15s linear;
+	width: 52px;
+
+	&:hover {
+		background-color: rgba(map-get($grey, 800), .7);
+	}
+
+	&.left {
+		left: 0px;
+
+		.fa {
+			margin: 0px 0px 0px 15px;
+		}		
+	}
+
+	&.right {
+		right: 0px;
+
+		.fa {
+			margin: 0px 0px 0px 21px;
+		}		
+	}
+}
+
+.carousel-caption-container {}
+
+.carousel-caption {
+	background-color: rgba(#fff, .95);
+	bottom: auto;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, .08);
+	left: auto;
+	padding: 25px;
+	right: auto;
+	text-align: left;
+	text-shadow: none;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	width: 320px;
+
+	h2, h3 {
+		margin: 0px;
+	}
+
+	h2 {
+		color: map-get($grey, 800);
+		font-size: 22px;
+
+		a {
+			color: map-get($grey, 800);
+		}
+	}
+
+	h3 {
+		border-bottom: 1px solid rgba(0, 0, 0, .08);
+		color: map-get($grey, 500);
+		display: block;
+		font-size: 11px;
+		font-weight: 500;
+		list-style: none;
+		margin: 10px 0px 30px 0px;
+		padding: 0px 0px 10px 0px;		
+		text-transform: uppercase;
+	}
+
+	.price {
+		color: map-get($color-secondary, 400);
+		font-size: 24px;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		display: none;
+	}
+}
+
+.property-carousel-widget-area {
+	@media (min-width: $screen-sm-min) {
+		left: 50%;
+		position: absolute;
+		top: 60px;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+	}
+
+	@media (max-width: $screen-xs-max) {
+		display: none;
+	}
+}
+
+.property-carousel-widget-area-inner {
+	background-color: #fff;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, .08);	
+	float: right;
+	padding: 16px 16px 5px 16px;
+}

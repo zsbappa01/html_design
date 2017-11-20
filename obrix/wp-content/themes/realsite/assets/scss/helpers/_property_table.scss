@@ -1,0 +1,273 @@
+.property-table {
+    margin: 0px 0px 30px 0px;
+    width: 100%;
+
+    thead {
+        th {
+            background-color: map-get($color-primary, 400);
+            color: #fff;
+            padding: 6px 12px;
+
+            @media (max-width: $screen-xs-max) {
+                padding: 6px;
+            }            
+        }
+    }
+
+    tbody {
+        td {
+            vertical-align: middle;
+            padding: 12px;
+
+            @media (max-width: $screen-sm-max) {
+                display: block;
+                padding: 6px;
+                width: 100%;
+            }
+        }
+
+        tr:nth-child(odd) {
+            td {
+                background-color: #fff;
+            }
+        }
+
+        tr:nth-child(even) {
+            td {
+                background-color: map-get($grey, 50);
+            }
+        }
+    }
+}
+
+.property-table-info {
+    overflow: hidden;
+    position: relative;
+
+    .ribbon {
+        background-color: map-get($green, 400);
+        box-shadow: 0px 2px 4px rgba(black, .12);
+        color: #fff;
+        height: 80px;
+        left: -64px;
+        line-height: 134px;
+        position: absolute;
+        text-align: center;
+        top: -44px;
+        transform: rotate(-45deg);
+        width: 120px;
+        z-index: 100;
+
+        .fa {
+            transform: rotate(45deg);
+        }
+
+        &.warning {
+            background-color: map-get($yellow, 700);
+        }
+
+        &.danger {
+            background-color: map-get($red, 700);
+        }
+    }
+}
+
+.property-table-info-image {
+    @include image_hover;
+    background-color: rgba(black, .15);
+    border-radius: 4px;
+    display: block;
+    float: left;
+    height: auto;
+    margin: 0px 16px 0px 0px;
+    overflow: hidden;
+    position: relative;
+    width: 120px;
+
+    @media (max-width: $screen-xs-max) {
+        height: auto;
+        width: 90px;
+    }
+
+    img {
+        display: block;
+        height: auto;
+        position: relative;
+        width: 100%;
+        z-index: 2;
+    }
+}
+
+.property-table-info-image-none {
+    border: 2px dashed map-get($grey, 300);
+    color: map-get($grey, 500);
+    display: block;
+    float: left;
+    font-size: 12px;
+    height: 90px;
+    line-height: 52px;
+    margin: 0px 16px 0px 0px;
+    padding: 16px;
+    text-align: center;
+    width: 120px;
+}
+
+.property-table-info-content {
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        clear: both;
+        padding-top: 20px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+        clear: both;
+        padding-top: 20px;
+    }
+}
+
+.property-table-info-content-title {
+    color: map-get($grey, 800);
+    font-size: 18px;
+    margin: 0px;
+
+    a {
+        color: map-get($grey, 800);
+    }
+
+    @media (max-width: $screen-xs-max) {
+        font-size: 13px;
+    }    
+}
+
+.property-table-info-content-price {
+    color: map-get($color-secondary, 500);
+    font-size: 15px;
+    font-weight: 600;
+
+    @media (max-width: $screen-xs-max) {
+        font-size: 13px;
+    }        
+}
+
+.property-table-info-content-location {
+    color: #9E9E9E; 
+    font-size: 11px;
+    font-weight: 500;    
+    list-style: none;
+    margin: 0px 0px 5px 0px;
+    padding: 0px;
+    text-transform: uppercase;
+}
+
+.property-table-beds, .property-table-baths {
+    color: map-get($color-black, 600);
+    font-size: 16px;
+    text-align: center;
+
+    @media (max-width: $screen-xs-max) {
+        font-size: 13px;
+    }        
+}
+
+.property-table-contract, .property-table-type, .important {
+    color: map-get($color-black, 600);
+    font-size: 16px;
+
+    @media (max-width: $screen-xs-max) {
+        font-size: 13px;
+    }        
+}
+
+.property-table-actions {
+    color: map-get($grey, 700);
+
+    button {
+        border: 0px;
+        background-color: transparent;
+        box-shadow: none;
+        color: map-get($grey, 700);
+        display: block;
+        font-size: 10px;
+        margin: 0px;
+        padding: 0px;
+        text-align: left;
+        transition: padding .15s linear;
+        width: 100%;
+        white-space: normal;
+
+        &:active, &:focus {
+            outline: 0px;
+        }
+
+        &.disabled {
+            cursor: auto;
+            opacity: .8;
+
+            &:hover {
+                padding: 0px;
+            }
+        }
+
+        &:hover {
+            padding-left: 3px;
+        }
+    }
+
+    .fa {    
+        float: right;
+        margin: 5px 0px 0px 0px;
+
+        &.success {
+            color: map-get($green, 400);        
+        }
+
+        &.buy {
+            color: map-get($grey, 500);
+            font-size: 13px;
+        }
+    }
+
+    .label-primary {
+        background-color: map-get($color-primary, 600);        
+        border-radius: 0px;
+        color: #fff;
+        display: inline-block;
+        float: none;
+        font-size: 9px;
+        margin: 0px 0px 0px 5px; 
+        padding: 2px 4px;
+        vertical-align: 1px;
+    }
+}
+
+.property-table-action {
+    background-color: #fff;
+    border: 2px solid map-get($grey, 200);
+    border-radius: 50%;
+    color: map-get($grey, 400);
+    display: inline-block;
+    font-size: 10px;
+    height: 30px;    
+    line-height: 26px;
+    margin: 0px 10px;
+    text-align: center;
+    transition: border .15s linear, color .15s linear;
+    width: 30px;
+
+    &:hover {
+        border-color: map-get($grey, 300);
+        color: map-get($color-secondary, 400);
+    }
+}
+
+.property-table-actions-inner {
+    border-right: 1px solid map-get($grey, 200);
+    font-size: 12px;
+    padding: 0px 40px 0px 0px;
+    width: 200px;
+
+    @media (max-width: $screen-sm-max) {
+        border: 0px;
+        padding: 0px;
+        width: auto;
+    }
+}

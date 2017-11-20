@@ -1,0 +1,43 @@
+.under-construction {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+.under-construction-top {
+	background-color: #fff;	
+	display: table-row;
+	text-align: center;
+	
+
+	h1 {
+		color: map-get($color-primary, 500);
+		font-size: 74px; 
+		font-weight: 300;
+		line-height: 100px;
+		margin: 60px 0px;
+		text-transform: uppercase;
+	}	
+}
+
+.under-construction-top-inner {
+	border-bottom: 1px solid map-get($grey, 200);
+	display: table-cell;
+	vertical-align: bottom;
+}
+
+.under-construction-bottom {	
+	background-color: map-get($grey, 50);
+	color: map-get($grey, 500);
+	display: table-row;	
+	font-size: 30px;	
+}
+
+.under-construction-bottom-inner {
+	background-image: url('../img/map.png'); 
+	display: table-cell;
+	line-height: 1.35;
+	padding: 60px 0px;
+	text-align: center;
+	vertical-align: top;
+}

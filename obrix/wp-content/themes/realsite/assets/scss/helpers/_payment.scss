@@ -1,0 +1,146 @@
+.payment-info {
+	background-color: map-get($green, 500);
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, .08);
+	color: #fff;
+	font-size: 20px;
+	font-weight: 300;
+	margin: 15px 0px 30px 0px;
+	padding: 30px;
+	text-align: center;
+
+	strong {
+		font-weight: 400;
+	}
+}
+
+.payment-form {
+	button {
+		margin-left: 20px;
+	}
+}
+
+.gateway-header {
+	background-color: #fff;
+	border: 1px solid map-get($grey, 200);
+	margin: 0px 0px 15px 0px;
+	padding: 0px 22px;
+
+	label {
+		margin: 0px;
+		padding: 22px 0px;
+
+		span {
+			color: map-get($grey, 700);
+			font-size: 14px;
+			font-weight: normal; 
+			line-height: 24px;
+			text-transform: none;
+		}
+
+		.fa {
+			padding-left: 20px;
+		}
+	}
+}
+
+.gateway-content {
+	background-color: #fff;
+	border: 1px solid map-get($grey, 200);
+	margin: 0px 0px 15px 0px;
+	opacity: .5;
+	padding: 22px;
+	transition: opacity .15s linear;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	label {
+        display: block;
+    }
+
+    &:after {
+        clear: both;
+        content: '';
+        display: block;
+    }
+}
+
+.submission-payment-back {
+    float: left;
+    display: block;
+    padding-top: 7px;
+
+    a  {
+        border-bottom: 1px solid map-get($color-primary, 500);
+        text-decoration: none;
+
+        &:hover {
+            color: map-get($color-primary, 500);
+            text-decoration: none !important;
+        }
+    }
+}
+
+.submission-payment-process {
+    @extend .btn;
+
+    float: right;
+}
+
+.gateway-paypal-credit-card-first-name {
+    clear: left;
+    float: left;
+    width: 48%;
+}
+
+.gateway-paypal-credit-card-last-name {
+    clear: right;
+    float: right;
+    width: 48%;
+}
+
+.gateway-paypal-credit-card-number {
+    float: left;
+    width: 48%;
+}
+
+.gateway-paypal-credit-card-cvv {
+    float: left;
+    margin-left: 4%;
+    width: 15%;
+}
+
+.gateway-paypal-credit-card-expires {
+    float: left;
+    margin-left: 4%;
+    width: 29%;
+}
+
+.gateway-paypal-credit-card-expires-month {
+    float: left !important;
+    width: 48% !important;
+}
+
+.gateway-paypal-credit-card-expires-year {
+    float: right !important;
+    width: 48% !important;
+}
+
+.wire-transfer-info {
+    margin-bottom: 20px;
+
+    dt {
+        color: map-get($grey, 600);
+    }
+}
+
+.wire-transfer-section-one {
+    float: left;
+    width: 45%
+}
+
+.wire-transfer-section-two {
+    float: right;
+    width: 45%
+}

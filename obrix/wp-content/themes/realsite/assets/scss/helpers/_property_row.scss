@@ -1,0 +1,158 @@
+.property-row {    
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
+    display: table;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.property-row-image {
+    @include image_hover;
+    background-color: rgba(black, .15);
+    display: table-cell;    
+    height: auto;    
+    width: 262px;
+
+    &:before {
+        @include placeholder('\f015', 40);
+    }
+
+    img {
+        display: block;
+        height: 100%; 
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+    }
+
+    @media (max-width: $screen-sm-max) {
+        display: block !important; 
+        float: none;
+        width: 100%;
+
+        img {
+            height: auto;
+            position: relative;
+        }
+    }
+}
+
+.property-row-content {
+    display: table-cell;    
+    padding: 0 30px 50px 30px;
+    position: relative;
+    vertical-align: top;
+
+    @media (max-width: $screen-sm-max) {
+        display: block;
+    }    
+}
+
+.property-row-body {
+    color: map-get($grey, 700);
+}
+
+.property-row-title {
+    color: map-get($color-black, 800);
+    margin-bottom: 0;
+
+    a {
+        color: map-get($color-black, 800);
+    }
+}
+
+.property-row-title-actions {
+    float: right;
+    font-size: 15px;
+
+    > span { 
+        display: inline-block;        
+        margin-left: 10px;
+    }
+
+    a {
+        color: map-get($grey, 400);
+        cursor: pointer;
+
+        &:hover {
+            color: map-get($color-secondary, 400);
+        }
+    }
+}
+
+.property-row-location {
+    border-bottom: 1px solid rgba(black, .08);
+    color: #9E9E9E;
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    list-style: none;
+    margin: 10px 0 10px 0;
+    padding: 0 0 10px 0;
+    text-transform: uppercase;
+
+    li {
+        display: inline;
+    }
+}
+
+.property-row-meta {
+    @extend .clearfix;
+
+    background-color: map-get($grey, 100);
+    border-top: 1px solid map-get($grey, 300);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        bottom: -50px;
+        left: -45px;
+        margin-left: 15px;
+        margin-right: -75px;
+        position: relative;
+        right: auto;
+        top: auto;
+    }
+
+    @media (max-width: $screen-xs-max) {
+        bottom: -50px;
+        left: -45px;
+        margin-left: 15px;
+        margin-right: -75px;
+        position: relative;
+        right: auto;
+        top: auto;
+    }
+}
+
+.property-row-meta-item {
+    border-right: 1px solid map-get($grey, 300);
+    float: left;
+    font-size: 12px;
+    padding: 6px 20px;
+
+    @media (max-width: $screen-xs-max) {
+        font-size: 10px;
+    }
+
+    span {
+        margin: 0 5px 0 0;
+    }
+
+    strong {
+        font-weight: 500;
+    }
+
+    &:last-child {
+        border-right: 0;
+    }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .property-row-image img {
+        height: 230px;
+        position: static;
+    }
+}

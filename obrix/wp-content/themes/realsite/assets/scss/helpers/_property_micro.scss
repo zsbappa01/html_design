@@ -1,0 +1,42 @@
+.property-micro {
+	@extend .clearfix;
+	clear: both;
+	margin: 0px 0px 8px 0px;
+	padding: 0px 0px 8px 0px;
+	position: relative;
+
+	img {
+		border-radius: 4px;
+		display: block;
+		float: left;
+		height: 34px !important;
+		margin: 0px 15px 0px 0px;
+		overflow: hidden;
+		width: 34px;
+	}
+
+	h3 {
+		font-size: 13px;
+		line-height: 34px;
+		margin: 0px;
+
+		a {
+			color: map-get($grey, 700);
+		}
+	}
+}
+
+.property-micro-actions {
+	position: absolute;
+	right: 0px;
+	top: 5px;	
+}
+
+.property-micro-actions-remove {
+	color: map-get($red, 400);
+	cursor: pointer;
+
+	&:hover {
+		color: map-get($red, 700);
+	}
+}

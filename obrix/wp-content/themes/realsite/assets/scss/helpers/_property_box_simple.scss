@@ -1,0 +1,152 @@
+.property-box-simple {
+	background-color: #fff;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, .08);
+	margin-bottom: 30px;
+
+	&:hover {
+		.property-box-simple-actions {
+			top: 0px;	
+		}
+
+		.property-box-simple-header {
+			background-color: map-get($color-primary, 400);
+
+			h2 {
+				a {
+					color: #fff;
+				}
+			}
+
+			h3 {
+				color: map-get($color-primary, 50);
+			}
+		}
+	}
+}
+
+.property-box-simple-meta {
+	padding: 16px 30px;
+
+	ul {
+		list-style: none;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	li {		
+		display: block;
+		font-size: 12px;
+		line-height: 28px;
+		margin: 0px;
+		overflow: hidden;
+	}
+
+	span {
+		color: map-get($grey, 600);
+	}
+
+	strong {
+		color: map-get($grey, 800);
+		float: right;
+	}
+}
+
+.property-box-simple-header {
+	background-color: map-get($grey, 200);
+	padding: 16px 30px;
+	position: relative;
+	transition: color .15s linear;
+	
+	h2, h3 {
+		line-height: 1.4;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	h2 {
+		color: map-get($grey, 700);
+        display: block;
+		font-size: 18px;
+		font-weight: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+		transition: color .15s linear;
+        white-space: nowrap;
+
+		a {
+			color: map-get($grey, 700);
+			transition: color .15s linear;
+		}
+	}
+
+	h3 {
+		color: map-get($grey, 500);
+		font-size: 15px;
+		font-weight: 500;
+		margin-top: 10px;
+		transition: color .15s linear;
+	}
+}
+
+.property-box-simple-header-thumbnail {
+	border: 3px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;    
+    right: 30px;
+	top: -18px;
+	transition: border-color .15s linear;
+	z-index: 3;
+
+    img {
+    	height: 36px;
+    	width: 36px;
+    }
+
+    &:hover {
+    	border-color: map-get($color-secondary, 400);
+    }
+}
+
+.property-box-simple-image-inner {
+	img {
+		position: relative;
+		z-index: 2;
+	}
+}
+
+.property-box-simple-actions {
+	background-color: #fff;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, .08);
+	line-height: 18px;
+	left: 0px; 
+	padding: 10px 16px;
+	position: absolute;
+	right: 0px;
+	top: -43px;
+	transition: top .15s linear;
+	z-index: 100;
+
+	span {
+		color: map-get($grey, 600);
+		font-size: 11px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	a {
+		color: map-get($grey, 500);		
+		cursor: pointer;
+
+		&:hover {
+			color: map-get($color-secondary, 500);
+		}
+	}
+
+	.fa {
+		font-size: 14px;
+		float: right;
+		margin-left: 20px;
+		margin-top: 3px;
+	}
+}

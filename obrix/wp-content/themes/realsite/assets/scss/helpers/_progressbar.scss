@@ -1,0 +1,54 @@
+.progressbar {
+	display: table;
+	margin: 0px 0px 50px 0px;
+	width: 100%;
+}
+
+.progressbar-inner {
+	display: table-row;
+}
+
+.progressbar-item { 
+	display: table-cell;
+	position: relative;
+	width: 33.33%;
+}
+
+.progressbar-item-value {
+	p {
+		color: map-get($grey, 700);
+	}
+}
+
+.progressbar-item-description {
+	padding: 0px 15px;
+	text-align: center;
+}
+
+.progressbar-item-circle {
+	background-color: map-get($grey, 200);
+	border: 2px solid map-get($grey, 300); 
+	border-radius: 50%;	
+	height: 88px;
+	line-height: 84px;
+	margin: 0px auto 30px auto;
+	text-align: center;
+	width: 88px;
+	z-index: 9999;
+	
+	span {
+		color: map-get($color-primary, 500);
+		font-size: 20px;
+	}
+}
+
+.progressbar-line {
+	background-color: map-get($grey, 300);
+	height: 2px;
+	position: absolute;
+	right: 0px;
+	top: 42px;
+	transform: translateX(50%);
+	-webkit-transform: translateX(50%);
+	width: 33.33%; 
+}

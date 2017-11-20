@@ -1,0 +1,157 @@
+.customizer {
+	bottom: 15px;
+	position: fixed;
+	right: 15px;
+	transition: right .2s linear;
+	z-index: 9999;
+
+	body.has-sidenav & {
+		right: 270px;
+	}
+}
+ 
+.customizer-header {
+	background-color: map-get($grey, 800);
+	border-radius: 50%;
+	bottom: 0px;
+	box-shadow: 0 2px 5px 0 rgba(black, .2);
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	font-size: 20px;
+	height: 56px;
+	line-height: 56px;
+	overflow: hidden;
+	position: relative;
+	right: 0px;
+	text-align: center;
+	transition: box-shadow .15s linear;
+    -webkit-user-select: none;
+    user-select: none;
+	width: 56px;
+	z-index: 100;	
+
+    &:hover {
+        color: #fff;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    &:focus {
+        color: #fff;
+        outline: 0px;
+    }	
+}
+
+.customizer-content {
+	background-color: #fff;	
+	bottom: 71px;
+	box-shadow: 0px 2px 4px rgba(black, .08);
+	height: 0px;
+	overflow: hidden;	
+	position: absolute;
+	right: 0px;
+	width: 0px;
+
+	h2 {
+		color: map-get($grey, 600);
+		font-size: 15px;
+		line-height: 1;
+		margin: 0px 0px 15px 0px;
+		padding: 0px;
+	}
+
+	ul.list {
+		li {
+			line-height: 16px;
+
+			a {
+				color: map-get($grey, 600);
+			}
+		}
+	}
+
+	ul.squares {
+		list-style: none;
+		margin: 0px;
+		padding: 0px;
+
+		li {
+			background-repeat: repeat;
+			background-position: center center;
+			border: 2px solid map-get($grey, 200);
+			cursor: pointer;
+			float: left;
+			height: 30px;
+			margin: 0px 8px 8px 0px;
+			overflow: hidden;			
+			position: relative;
+			width: 30px;
+
+			.color-1 {
+				display: block;
+				height: 30px;
+				width: 30px;
+			}
+
+			.color-2 {
+				display: block;
+				height: 24px;
+				position: relative;
+				right: -14px;
+				top: -14px;
+				transform: rotate(-45deg);
+				-webkit-transform: rotate(-45deg);
+				width: 24px;
+			}
+
+			&:nth-child(4n) { 
+				margin-right: 0px;
+			}
+
+			&.cloth-alike {
+				background-image: url('../img/patterns/cloth-alike.png');
+			}
+
+			&.corrugation {
+				background-image: url('../img/patterns/corrugation.png');
+			}
+
+			&.diagonal-noise {
+				background-image: url('../img/patterns/diagonal-noise.png');
+			}			
+
+			&.dust {
+				background-image: url('../img/patterns/dust.png');
+			}
+
+			&.fabric-plaid {
+				background-image: url('../img/patterns/fabric-plaid.png');
+			}
+
+			&.farmer {
+				background-image: url('../img/patterns/farmer.png');
+			}
+
+			&.grid-noise {
+				background-image: url('../img/patterns/grid-noise.png');
+			}			
+
+			&.lghtmesh {
+				background-image: url('../img/patterns/lghtmesh.png');
+			}				
+
+			&.pw-maze-white {
+				background-image: url('../img/patterns/pw-maze-white.png');
+			}				
+
+			&.none {
+				background-image: url('../img/patterns/no-pattern.png');
+			}				
+		}
+	}
+}
+
+.customizer-content-inner {
+	padding: 16px;
+	width: 184px;
+}

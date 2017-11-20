@@ -1,0 +1,465 @@
+.map-wrapper {
+    position: relative;
+}
+
+.map {
+    background-color: #fff;
+    height: 500px;
+    position: relative;
+}
+
+.marker {
+    background-color: #fff;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    height: 56px;
+    position: relative;
+    text-align: center;
+    transition: all .15s ease-out;
+    -webkit-user-select: none;
+    user-select: none;
+    width: 56px;
+
+    img {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        border-radius: 50%;
+        display: block;
+        height: 50px;                        
+        width: 50px;
+    }
+
+    &:hover {
+        transform: scale(1.4);
+        transition: all .15s ease-in ;
+    }
+
+    &:after {
+        border-radius: 50%;
+        bottom: 0px;
+        content: '';
+        display: block;
+        left: 0px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    span {
+        background-color: #fff;
+        border: 2px solid map-get($color-secondary, 500);
+        border-radius: 50%;        
+        display: block;
+        font-size: 13px;
+        font-weight: 600;
+        height: 50px;
+        line-height: 46px;
+        text-align: center;
+        width: 50px;
+    }
+
+    &.multiple {
+        &:hover {
+            transform: scale(1);
+        }
+    }
+}
+
+.pink {
+    background-color: map-get($pink, 500);
+}
+
+.cyan {
+    background-color: map-get($cyan, 500);
+}
+
+.blue-grey {
+    background-color: map-get($blue-grey, 500);
+}
+
+.light-blue {
+    background-color: map-get($light-blue, 500);
+}
+
+.blue {
+    background-color: map-get($blue, 500);
+}
+
+.purple {
+    background-color: map-get($purple, 500);
+}
+
+.deep-purple {
+    background-color: map-get($deep-purple, 500);
+}
+
+.indigo {
+    background-color: map-get($indigo, 500);
+}
+
+.teal {
+    background-color: map-get($teal, 500);
+}
+
+.green {
+    background-color: map-get($green, 500);
+}
+
+.light-green {
+    background-color: map-get($light-green, 500);
+}
+
+.lime {
+    background-color: map-get($lime, 500);
+}
+
+.yellow {
+    background-color: map-get($yellow, 700);
+}
+
+.amber {
+    background-color: map-get($amber, 500);
+}
+
+.orange {
+    background-color: map-get($orange, 500);
+}
+
+.deep-orange {
+    background-color: map-get($deep-orange, 500);
+}
+
+.brown {
+    background-color: map-get($brown, 500);
+}
+
+.red {
+    background-color: map-get($red, 500);
+}
+
+.clusterer {
+    background-color: map-get($color-primary, 500);
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 3px rgba(black, .12), 0px 0px 0px 6px rgba(black, .12), 0px 0px 0px 9px rgba(black, .12);
+    color: #fff;
+    font-weight: 700;
+    height: 40px;
+    line-height: 42px;
+    text-align: center;
+    width: 40px;
+}
+
+.map-filter-horizontal {
+    background-color: rgba(#fff, .92);
+    border-bottom: 2px solid map-get($grey, 200);
+    border-top: 1px solid rgba(black, .05);
+    bottom: 0px;
+    left: 0px;
+    padding: 41px 0px;
+    position: absolute;
+    right: 0px;
+
+    .form-group {
+        margin-bottom: 0px;
+    }
+
+    .form-control, .bootstrap-select button.btn {
+        box-shadow: 0px 1px 0px map-get($grey, 400);
+        color: map-get($grey, 600);
+
+        @include input-placeholder {
+            color: map-get($grey, 600);
+        }
+
+        &:focus {
+            box-shadow: 0px 2px 0px map-get($color-primary, 400);
+        }
+    }
+
+    .bootstrap-select div.dropdown-menu li.selected a {
+        background-color: map-get($color-primary, 600) !important;
+    }
+
+    .bootstrap-select.open  button.btn {
+        box-shadow: 0px 2px 0px map-get($color-primary, 400) !important;
+        color: map-get($grey, 600) !important;
+    }
+}
+
+.infobox {
+    @extend .clearfix;
+    background-color: transparent;
+    height: 120px;
+    position: relative;
+    width: 420px;
+
+    .close {
+        color: map-get($grey, 800);
+        cursor: pointer;
+        height: 17px;
+        display: block;
+        font-size: 10px;
+        line-height: 17px;
+        opacity: 1;
+        position: absolute;
+        right: 10px;
+        text-align: center;
+        text-indent: 0px;
+        top: 10px;
+        transition: background-color .15s linear, color .15s linear;
+        width: 17px;
+    }
+
+    &:before {
+        border: 6px solid transparent;
+        border-right-color: map-get($color-primary, 500);
+        content: '';
+        display: block;
+        height: 0px;
+        left: -12px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0px;
+        z-index: 999;
+
+    }
+    &.multiple {
+        &:before {
+            border-right-color: map-get($color-secondary, 500);
+        }
+    }
+    
+    &:hover {
+        .infobox-contact {
+            margin-left: 0px;
+        }
+    }
+}
+
+.infobox-scroll {
+    bottom: 4px;
+    color: map-get($color-secondary, 600);
+    font-size: 16px;
+    position: absolute;
+    right: 8px;
+    text-align: center;
+}
+
+.infobox-image {
+    @include image_hover;
+    background-color: rgba(black, .12);
+    border-radius: 2px 0px 0px 2px;
+    border-left: 4px solid map-get($color-primary, 500);
+    display: block;
+    float: left;
+    height: 120px;
+    margin: 0px;
+    overflow: hidden;
+    position: relative;
+    width: 120px;
+
+    &:before {
+        @include placeholder('\f015', 24);
+    }
+
+    img {
+        display: block;
+        max-width: 120px;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.infobox-content {
+    background-color: #fff;
+    height: 120px;
+    float: left;
+    padding: 8px;
+    position: relative;
+    width: 160px;
+    z-index: 2;
+
+    .multiple & {
+        border-radius: 2px 0px 0px 2px;
+        border-left: 4px solid map-get($color-secondary, 500);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+        width: 280px;
+    }
+
+}
+
+.infobox-content-title {
+    color: map-get($grey, 800);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    a {
+        color: map-get($grey, 800);
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.infobox-content-body {
+    background-color: #fff;
+    color: map-get($grey, 700);
+    font-size: 11px;
+    line-height: 16px;
+    height: 80px;
+    margin: 0px; 
+    position: relative;
+    overflow: hidden;
+
+    .multiple & {
+        height: 102px;
+        overflow: auto;
+    }
+}
+
+.infobox-content-body-location {
+    color: #9E9E9E;
+    display: block;
+    font-size: 9px;
+    font-weight: 500; 
+    list-style: none;
+    margin: 0px 0px 2px 0px;
+    overflow: hidden;
+    padding: 0px;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 144px;
+}
+
+.infobox-content-body-area, .infobox-content-body-baths, .infobox-content-body-beds {
+    line-height: 19px;
+}
+
+.infobox-content-body-item {
+    @extend .clearfix;
+    border-bottom: 1px solid rgba(black, .08);
+    margin-bottom: 9px;
+    padding-bottom: 9px;
+
+    &:last-child {
+        border-bottom: 0px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    img {
+        display: block;
+        float: left;
+        margin: 0px 10px 0px 0px;
+        height: 42px;
+        width: 42px;
+    }
+
+    h3 {
+        color: map-get($grey, 800);
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 0px;
+        margin: 14px 0px 10px 0px;
+        padding: 0px;
+        text-transform: uppercase;        
+
+        a {
+            color: map-get($grey, 800);
+        }
+    }
+
+    h4 {
+        font-size: 12px;
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+.infobox-content-body-value {
+    strong {
+        color: map-get($grey, 600);
+        font-size: 10px;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.infobox-content-price {
+    background-color: #fff;
+    box-shadow: 0px 2px 2px 0px rgba(black, .12);
+    color: map-get($color-secondary, 400);
+    font-size: 11px;
+    font-weight: 600;
+    left: 7px;
+    line-height: 1;
+    margin: 0px;
+    padding: 6px 7px;
+    position: absolute;
+    top: 7px;
+    z-index: 3;
+}
+
+.infobox-contact {
+    background-color: map-get($grey, 200);
+    height: 120px;
+    float:left;
+    padding: 8px;
+    position: relative;
+    margin-left: -140px;
+    transition: margin .2s linear;
+    width: 140px;
+    z-index: 1;
+}
+
+.infobox-contact-title {
+    color: map-get($grey, 800);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    a {
+        color: map-get($grey, 800);
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.infobox-contact-body {
+    color: map-get($grey, 700);
+
+    .fa {
+        color: map-get($grey, 900);
+        margin: 0px 5px 0px 0px;
+        vertical-align: middle;
+    }
+}
+
+#map-admin {
+    @media (max-width: $screen-xs-max) {
+        height: 400px !important;
+    }
+}
+
+.property-map-widget-area-inner {
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, .08); 
+    float: right;
+    margin-top: -440px;
+    padding: 16px 16px 5px 16px;
+
+    @media (max-width: $screen-xs-max) {
+        float: none;
+        margin: 30px 0px 0px 0px;
+        width: 100%;
+    }
+}
