@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private TextView mTextMessage;
     private EditText firstInput, secondInput;
-    private Button btnCal;
+    private Button btnadd,btnmul,btnsub;
 
 
     @Override
@@ -24,9 +24,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         firstInput = (EditText) findViewById(R.id.etFirst);
         secondInput = (EditText) findViewById(R.id.edtSecondInput);
-        btnCal = (Button) findViewById(R.id.btnCal);
+        btnadd = (Button) findViewById(R.id.btnadd);
+        btnmul = (Button) findViewById(R.id.btnmul);
+        btnsub = (Button) findViewById(R.id.btnsub);
         mTextMessage = (TextView) findViewById(R.id.tvResult);
-        btnCal.setOnClickListener(this);
+        btnadd.setOnClickListener(this);
+        btnmul.setOnClickListener(this);
+        btnsub.setOnClickListener(this);
 
 
     }
@@ -38,8 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int a = Integer.parseInt(fistValue);
         int b = Integer.parseInt(secondValue);
         mTextMessage.setText("Result=" + addition(a, b));
-        mTextMessage.setText("Result=" + multiplication(a, b));
-        mTextMessage.setText("Result=" + substraction(a, b));
+
     }
     private void multiplication() {
         String fistValue = firstInput.getText().toString();
@@ -47,9 +50,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         int a = Integer.parseInt(fistValue);
         int b = Integer.parseInt(secondValue);
-        mTextMessage.setText("Result=" + addition(a, b));
+
         mTextMessage.setText("Result=" + multiplication(a, b));
-        mTextMessage.setText("Result=" + substraction(a, b));
+
     }
     private void substraction() {
         String fistValue = firstInput.getText().toString();
@@ -57,8 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         int a = Integer.parseInt(fistValue);
         int b = Integer.parseInt(secondValue);
-        mTextMessage.setText("Result=" + addition(a, b));
-        mTextMessage.setText("Result=" + multiplication(a, b));
+
         mTextMessage.setText("Result=" + substraction(a, b));
     }
 

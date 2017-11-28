@@ -8,7 +8,8 @@
     android:orientation="vertical"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    tools:context="com.zsbappa.zakariashahed.MainActivity">
+    tools:context="com.zsbappa.zakariashahed.MainActivity"
+    android:weightSum="1">
 
     <TextView
         android:padding="10dp"
@@ -17,21 +18,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Calculator" />
+        android:text="Calculator"
+      />
+
 
     <EditText
         android:id="@+id/etFirst"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="Input your first number" />
+        android:hint="Input your first number"
+        android:inputType="phone"/>
 
     <EditText
         android:id="@+id/edtSecondInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="Input your second number" />
+        android:hint="Input your second number"
+        android:inputType="phone"
+        />
 
     <Button
         android:id="@+id/btnadd"
@@ -73,6 +79,14 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:text="RESULT"
+        android:textColor="#ff0000"
         android:textSize="20sp" />
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_weight="0.45" />
 
 </LinearLayout>
